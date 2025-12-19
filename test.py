@@ -16,6 +16,8 @@ app = FastAPI()
 origins = [
     "http://localhost:5173",
     "http://localhost:3000",
+    "https://chat-bot-for-machine-learning.vercel.app/"
+    "https://chat-bot-for-machine-learning.vercel.app"
 ]
 
 class Message(BaseModel):
