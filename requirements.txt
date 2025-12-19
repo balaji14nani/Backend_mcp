@@ -1,0 +1,29 @@
+# FastAPI and Server
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+python-dotenv==1.0.0
+pydantic==2.5.3
+
+# Google Gemini AI
+google-genai==0.2.2
+
+# Machine Learning
+scikit-learn==1.4.0
+xgboost==2.0.3
+imbalanced-learn==0.12.0
+
+# SHAP (Explainable AI)
+shap==0.44.1
+
+# Data Processing
+pandas==2.2.0
+numpy==1.26.3
+joblib==1.3.2
+
+# Visualization (for SHAP plots)
+matplotlib==3.8.2
+seaborn==0.13.1
+
+# Testing
+requests==2.31.0
+
