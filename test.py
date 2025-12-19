@@ -2,7 +2,7 @@ import os
 import time
 from datetime import datetime, timedelta
 from google import genai
-from google.api_core import exceptions as google_exceptions
+
 from dotenv import load_dotenv
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
@@ -846,8 +846,14 @@ def clear_specific_cache(cache_type: str):
 
 if __name__ == "__main__":
     import uvicorn
+    
+    # Get host and port from environment variables (for deployment)
+    host = os.getenv("HOST", "0.0.0.0")
+    port = int(os.getenv("PORT", 8000))
+    
     print("Starting Toxicity Prediction API...")
     print("Models loaded successfully!")
-    print("API available at: http://localhost:8000")
-    print("Health check: http://localhost:8000/health")
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    print(f"API available at: http://{host}:{port}")
+    print(f"Health check: http://{host}:{port}/health")
+    
+    uvicorn.run(app, host=host, port=port)
